@@ -1,0 +1,32 @@
+[
+    {
+        "title": "dude Mguy",
+        "content": "an amazing post about a dude my guy!",
+        "author_id": 1
+    },
+    {
+        "title": "Coding makes for bad party tricks",
+        "content": "you dont need to flex so hard on the iG...",
+        "author_id": 2
+    },
+    {
+        "title": "The story of LT Dangle",
+        "content": "A battle against the trailing commas.........",
+        "author_id": 3
+    },
+    {
+        "title": "New line is new wave",
+        "content": "It is easier to read a block of code when it is started on a new line...",
+        "author_id": 4
+    },
+    {
+        "title": "The event loop rexplained.. again..",
+        "content": "You know you need it so here it is my guy......",
+        "author_id": 5
+    },
+    {
+        "title": "Functional programming and where to begin",
+        "content": "FP is a whole other animal i was not expecting to be faced with.......",
+        "author_id": 6
+    }
+]

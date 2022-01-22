@@ -1,0 +1,32 @@
+[
+    {
+        "content": "an amazing comment by a dude my guy!",
+        "author_id": 1,
+        "post_id": 1
+    },
+    {
+        "content": "an amazing comment concerning this situation",
+        "author_id": 2,
+        "post_id": 2
+    },
+    {
+        "content": "an amazing comment in support of this article!",
+        "author_id": 3,
+        "post_id": 3
+    },
+    {
+        "content": "Grr lets cancel this author!",
+        "author_id": 4,
+        "post_id": 4
+    },
+    {
+        "content": "Eww this article is way too woke",
+        "author_id": 5,
+        "post_id": 5
+    },
+    {
+        "content": "Hey im giving away 3000 to anyone who DM's me right now",
+        "author_id": 6,
+        "post_id": 6
+    }
+]
