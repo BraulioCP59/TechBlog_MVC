@@ -2,11 +2,10 @@ const router = require('express').Router();
 //const withAuth = require('../utils/auth');
 const { Post, User, Comment} = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try
     {
-        //query all post data for Post Title, date created
-        const allPostData = await Post.findAll({
+        const postData = await Post.findByPk(req.params.id, {
             include: [
                 {
                   model: User,
@@ -18,12 +17,11 @@ router.get('/', async (req, res) => {
               ],
         });
 
-        const posts = allPostData.map((post) => post.get({ plain: true }));
-        res.render('home', {
-            posts,
+        const post = postData.get({plain: true });
+        res.render('viewPost', {
+            post,
             logged_in: req.session.logged_in
         });
-
     }catch(err)
     {
         res.status(404).render('404');
