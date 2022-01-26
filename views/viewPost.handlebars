@@ -1,1 +1,16 @@
-<h1>this is how you view a single post clicked on by the home page!!</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header d-flex justify-content-between">
+                    <h5>{{post.title}}</h5>
+                    <h6 style="font-size: smaller;">Posted by {{post.user.name}} on {{post.created}}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{post.content}}</p>
+                </div>
+            </div>
+    </div>
+  </div>
+</div>
