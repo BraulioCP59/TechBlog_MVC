@@ -15,8 +15,8 @@ router.use('/login', login_routes);
 router.use('/signup', signUp_routes);
 router.use('/dashboard', dashboard_routes);
 router.use('/post', viewPost_routes);
-router.use('/post', createPost_routes);
-router.use('/post', updatePost_routes);
+router.use('/create-post', createPost_routes);
+router.use('/update-post', updatePost_routes);
 
 
 
