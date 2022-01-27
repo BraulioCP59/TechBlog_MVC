@@ -5,28 +5,34 @@ const { Post, User, Comment} = require('../models');
 router.get('/:id', async (req, res) => {
     try
     {
-        const userPostData = await Post.findAll({
-            where: {
-                author_id: req.params.id
-            },
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
+        if(!req.session.logged_in)
+        {
+            res.redirect('/login');
+        }else
+        {
+            const userPostData = await Post.findAll({
+                where: {
+                    author_id: req.params.id
                 },
-                {
-                    model: Comment
-                }
-            ],
-        });
-
-        const userPosts = userPostData.map((posts) => posts.get({plain: true }));
-        console.log(userPosts);
-
-        res.render('dashboard', {
-            userPosts,
-            logged_in: req.session.logged_in
-        });
+                include: [
+                    {
+                        model: User,
+                        attributes: ['name'],
+                    },
+                    {
+                        model: Comment
+                    }
+                ],
+            });
+    
+            const userPosts = userPostData.map((posts) => posts.get({plain: true }));
+            console.log(userPosts);
+    
+            res.render('dashboard', {
+                userPosts,
+                logged_in: req.session.logged_in
+            });
+        }
 
     }catch(err)
     {

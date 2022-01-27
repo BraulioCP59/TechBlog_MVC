@@ -6,7 +6,7 @@ router.post('/login', async (req, res) => {
     try
     {
         //get user data using email
-        const userData = await User.findOne({ where: { email: req.body.email}});
+        const userData = await User.findOne({ where: { name: req.body.username}});
 
         //returns error if no record in db using email
         if(!userData)
