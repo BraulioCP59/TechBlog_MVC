@@ -1,5 +1,4 @@
 //selectors for sign up form data
-
 const signUpBtn = document.querySelector('#signUpBtn');
 const loginBtn = document.querySelector('#loginBtn');
 
@@ -51,11 +50,12 @@ async function loginHandler()
       headers: {"Content-Type": "application/json" }
     });
 
+    const data = await response.json();
     //
     if(response.ok)
     {
       //redirect to the dashboard for that existing user
-      document.location.replace(`/dashboard/${response.id}`);
+      document.location.replace(`/dashboard/${data.user.id}`);
     }else
     {
       alert("unable to login");
