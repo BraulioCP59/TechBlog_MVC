@@ -11,8 +11,8 @@
         </ul>
         <ul class="navbar-nav">
            <li class= "nav-item px-2">
-             {{#if loggedIn }}
-              <a class="nav-link navbar-brand text-white login-logout" id="logout" href="/">Logout</a>
+             {{#if logged_in}}
+              <a class="nav-link navbar-brand text-white login-logout" id="logout" href="javascript:void(0)">Logout</a>
               {{else}}
               <a class="nav-link navbar-brand text-white login-logout" href="/login">Login</a>
              {{/if}}

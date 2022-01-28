@@ -39,20 +39,16 @@ router.post('/login', async (req, res) => {
 })
 
 //route for logging out and terminating a session
-router.post('/logout', async (req, res) => {
-    //check for logged in sesh
-    if(req.session.logged_in)
+router.get('/logout', async (req, res) => {
+    
+    if(req.session.logged_in) 
     {
-        //destroy the session and return status
-        req.session.destroy(() => {
-            res.status(204).end();
-        });
+        await req.session.destroy( () => res.status(200).end())
 
-    }else
-    {
-        //otherwise could not find a session to destroy
-        res.status(404).end();
+    }else{
+      res.status(400).json({message: "This was a bad request"})
     }
 })
 
 module.exports = router;
+
