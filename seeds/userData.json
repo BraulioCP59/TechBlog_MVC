@@ -1,32 +1,26 @@
 [
     {
         "name": "dude Mguy",
-        "email": "test@test.com",
         "password": "123456789"
     },
     {
         "name": "Braulio Mora",
-        "email": "bmora@email.com",
         "password": "123456789"
     },
     {
         "name": "Mall Grab",
-        "email": "mgrab@email.com",
         "password": "123456789"
     },
     {
         "name": "Pavel Nedved",
-        "email": "pnedvev@email.com",
         "password": "123456789"
     },
     {
         "name": "Alessandro Del Piero",
-        "email": "adpeiro@email.com",
         "password": "123456789"
     },
     {
         "name": "Mauro Cameronesi",
-        "email": "mcameronesi@email.com",
         "password": "123456789"
     }
 ]

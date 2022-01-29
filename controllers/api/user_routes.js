@@ -41,15 +41,21 @@ router.post('/', async (req, res) => {
     /*
     use this for post..
     {
-        "name": "dude Mguy"
-        "email": "test@test.com"
+        "name": "dude Mguy",
         "password": "123456789"
     }
     */
     try
     {
         const newUser = await User.create(req.body);
-        res.status(201).json({message: "A new user has been successfully been created!",body: newUser});
+
+        //store session
+        req.session.save(() => {
+            req.session.user_id = newUser.id;
+            req.session.logged_in = true;
+            //respond with a successful login attempt
+            res.status(201).json({message: "A new user has been successfully been created and you are now logged in!",body: newUser});
+        })
     }catch(err)
     {
         res.status(500).send(err);

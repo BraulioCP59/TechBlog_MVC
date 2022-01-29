@@ -2,36 +2,6 @@
 const signUpBtn = document.querySelector('#signUpBtn');
 const loginBtn = document.querySelector('#loginBtn');
 
-//even handler for sign up form submission
-async function signUpHandler()
-{ 
-  //needs name, email and password
-  const username = document.querySelector('#username').value.trim();
-  const password = document.querySelector('#password').value.trim();
-
-  //fetch call to user api to create a new user
-  const response = await fetch('/api/auth/user', {
-    method: 'POST',
-    body: JSON.stringify({
-      name,
-      username,
-      password
-    }),
-    headers: {"Content-Type": "application/json"}
-  });
-
-  //if response is ok 
-  if(response.ok)
-  {
-    //redirect to dashboard for that new user
-    document.location.replace(`/dashboard/${response.id}`);
-  }else
-  {
-    //redirect to an error page
-    document.location.replace('/404');
-  }
-}
-
 
 //event handler for logging in
 async function loginHandler()
