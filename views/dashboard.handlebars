@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col">
             <div class="text-center" style="margin-top: 20px;">
-              <button type="button" class="btn btn-primary" style="width: 20%;">+ New Post</button>
+              <button type="button" id="newPost" class="btn btn-primary" style="width: 20%;">+ New Post</button>
             </div>
     </div>
   </div>
@@ -11,7 +11,7 @@
     <div class="col">
         {{#each userPosts}}
 
-            <div class="card" style="margin-top: 20px;">
+            <div class="card" id="{{id}}" style="margin-top: 20px;">
                 <div class="card-header d-flex justify-content-between">
                     <h5>{{title}}</h5>
                     <h6 style="font-size: smaller;">{{created}}</h6>
@@ -24,3 +24,4 @@
 </div>
 
 <script src="/js/logout.js"></script>
+<script src="/js/dashboard.js"></script>
