@@ -6,7 +6,7 @@
                 <div class="card-header bg-dark text-white">
                     <h2>Create New Post</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-body postId" id="{{post.id}}">
                     <div class="mb-md-5 mt-md-4 pb-5">
 
                         <h4 class="fw-bold mb-2 text-uppercase">title</h4>
@@ -19,8 +19,8 @@
                             <textarea class="form-control" id="content"rows="5" id="comment">{{post.content}}</textarea>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-primary btn-lg px-5" type="submit" style="width: 100%; margin-top: 15px">Update</button>
-                            <button class="btn btn-secondary btn-lg px-5" type="submit" style="width: 100%; margin-top: 15px">Delete</button>
+                            <button class="btn btn-primary btn-lg px-5" id="updatePost" type="submit" style="width: 100%; margin-top: 15px">Update</button>
+                            <button class="btn btn-secondary btn-lg px-5" id="deletePost" type="submit" style="width: 100%; margin-top: 15px">Delete</button>
                         </div>
 
                     </div>
