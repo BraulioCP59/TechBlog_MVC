@@ -3,8 +3,7 @@
 //even handler for sign up form submission
 async function signUpHandler()
 { 
-    console.log('HEREWEARE!!!!');
-  //needs name, email and password
+  //needs name and password
   const name = document.querySelector('#username').value.trim();
   const password = document.querySelector('#password').value.trim();
 

@@ -26,11 +26,11 @@ homepage and the dashboard; and the option to log in -  done
 WHEN I click on the homepage option - Done
 THEN I am taken to the homepage - Done
 
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
+WHEN I click on any other links in the navigation - Done
+THEN I am prompted to either sign up or sign in - Done
 
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
+WHEN I choose to sign up - Done
+THEN I am prompted to create a username and password - Done
 
 WHEN I click on the sign-up button
 THEN my user credentials are saved and I am logged into the site
