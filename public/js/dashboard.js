@@ -86,7 +86,28 @@ async function editPostHandler()
 
 }
 
+async function deletePostHandler()
+{
+    const postId = document.querySelector('.postId').getAttribute('id');
+    author_id = parseInt(window.localStorage.getItem('userId'));
+    console.log(postId);
 
+    const response = await fetch(`/api/post/${postId}`,{
+        method: 'DELETE'
+    });
+
+    //if response is ok 
+    if(response.ok)
+    {
+        //redirect to dashboard for that new user
+        document.location.replace(`/dashboard/${author_id}`);
+    }else
+    {
+        //redirect to an error page
+        document.location.replace('/404');
+    } 
+    
+}
 
 //function invocations
 addPostBtn ? addPostBtn.addEventListener('click', newPostHandler) : console.log('add post option not found');
@@ -103,3 +124,4 @@ if(postCards)
 
 createPostBtn? createPostBtn.addEventListener('click', createPostHandler) : console.log('create post form not found');
 updatePostBtn ? updatePostBtn.addEventListener('click', editPostHandler) : console.log('edit post form not found');
+deletePostBtn ? deletePostBtn.addEventListener('click', deletePostHandler) : console.log('delete post form not found');
