@@ -24,6 +24,7 @@ async function loginHandler()
     //
     if(response.ok)
     {
+      window.localStorage.setItem('username',username);
       //redirect to the dashboard for that existing user
       document.location.replace(`/dashboard/${data.user.id}`);
     }else

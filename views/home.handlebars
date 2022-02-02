@@ -4,7 +4,7 @@
     <div class="col">
         {{#each posts}}
 
-            <div class="card" style="margin-top: 20px;">
+            <div class="card postCards" id="{{id}}" style="margin-top: 20px;">
                 <div class="card-header d-flex justify-content-between">
                     <h5>{{title}}</h5>
                     <h6 style="font-size: smaller;">Posted by {{user.name}} on {{created}}</h6>
@@ -18,3 +18,6 @@
     </div>
   </div>
 </div>
+
+<script src="/js/logout.js"></script>
+<script src="/js/homePage.js"></script>

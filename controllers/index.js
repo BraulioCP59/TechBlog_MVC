@@ -7,6 +7,7 @@ const dashboard_routes = require('./dashboard-routes');
 const viewPost_routes = require('./viewPost-routes');
 const createPost_routes = require('./createPost-routes');
 const updatePost_routes = require('./updatePost-routes');
+const comment_routes = require('./comment-routes');
 
 
 router.use('/api', api_routes);
@@ -17,6 +18,7 @@ router.use('/dashboard', dashboard_routes);
 router.use('/post', viewPost_routes);
 router.use('/create-post', createPost_routes);
 router.use('/update-post', updatePost_routes);
+router.use('/comment', comment_routes);
 
 
 

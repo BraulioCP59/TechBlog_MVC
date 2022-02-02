@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+
+        <div class="card postCard" id="{{post.id}}" style="margin-top: 20px;">
+            <div class="card-header d-flex justify-content-between">
+                <h5>{{post.title}}</h5>
+                <h6 style="font-size: smaller;">Posted by {{post.user.name}} on {{post.created}}</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{post.content}}</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 5%; margin-bottom: 5%">
+            <div class="card-header bg-dark text-white">
+                <h2>Comment</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-md-5 mt-md-4 pb-1" style="margin-bottom: 5%;">
+
+                    <h4 class="fw-bold mb-2 text-uppercase">Comment</h4>
+                    <div class="form-outline form-white mb-4">
+                        <textarea class="form-control" id="content"rows="5"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg px-5" id="createComment" type="submit" style="width: 100%;">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/logout.js"></script>
+<script src="/js/homePage.js"></script>
