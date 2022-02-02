@@ -18,25 +18,3 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 https://tech-blog-brauliocp59-prod.herokuapp.com/
 
 
-
-## Usage
-
-The following images show the web application's appearance and functionality:
-
-
-## Login 
-
-![Alt text](./images/Login.png)
-
-## Home 
-
-![Alt text](./images/home.png)
-
-## Dashboard 
-
-![Alt text](./images/dashboard.png)
-
-## Post Details 
-
-![Alt text](./images/updatePost.png)
-
